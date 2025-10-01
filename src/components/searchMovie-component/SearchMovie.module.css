@@ -1,0 +1,47 @@
+.shell {
+    display: flex;
+    align-items: center;
+    justify-content: center;   /* центруємо */
+    margin: 0 auto;            /* для вирівнювання по центру */
+    max-width: 400px;          /* компактніше */
+    width: 100%;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #0b1623;
+    color: #e6edf7;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 4px 18px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+.input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #e6edf7;
+    font-size: 14px;
+    padding: 6px;
+    min-width: 140px;          /* щоб був маленький */
+}
+
+.input::placeholder { color: rgba(230,237,247,.55); }
+
+.button {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.08);
+    color: #e6edf7;
+    cursor: pointer;
+    transition: background .12s ease, transform .12s ease;
+}
+
+.button:hover {
+    background: rgba(255,255,255,0.16);
+    transform: translateY(-1px);
+}
+
+.icon { width: 16px; height: 16px; }

@@ -1,0 +1,55 @@
+.container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.back {
+    margin-bottom: 12px;
+    background: none;
+    border: none;
+    color: #2563eb;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 16px;
+}
+
+.title {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+}
+
+.block {
+    margin-bottom: 12px;
+}
+
+.overview {
+    line-height: 1.5;
+    color: #374151;
+}
+.back {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 6px 14px;
+    background: #2563eb;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.back:hover {
+    background: #1e40af;
+}
+

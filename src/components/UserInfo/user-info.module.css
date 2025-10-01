@@ -1,0 +1,25 @@
+.wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #0b1220;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    user-select: none;
+}
+
+.badge {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0b1220;
+}

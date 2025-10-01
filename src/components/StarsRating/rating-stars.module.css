@@ -1,0 +1,16 @@
+.stars {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.filled {
+    color: gold;
+    font-size: 14px;
+}
+
+.empty {
+    color: gray;
+    font-size: 14px;
+}
