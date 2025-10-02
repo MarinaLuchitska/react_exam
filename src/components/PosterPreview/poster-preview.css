@@ -1,0 +1,17 @@
+/* список карток */
+.poster-card {
+    display: block;
+    width: 185px;
+    height: 278px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* сторінка деталей */
+.poster-details {
+    display: block;
+    width: 100%;        /* ← вписується в колонку 280px */
+    aspect-ratio: 2 / 3;/* ← зберігає пропорції, прибрали height */
+    object-fit: cover;
+    border-radius: 10px;
+}

@@ -4,38 +4,7 @@
     margin: 0 auto;
 }
 
-.back {
-    margin-bottom: 12px;
-    background: none;
-    border: none;
-    color: #2563eb;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.back:hover {
-    text-decoration: underline;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 16px;
-}
-
-.title {
-    margin: 0 0 8px 0;
-    font-size: 24px;
-}
-
-.block {
-    margin-bottom: 12px;
-}
-
-.overview {
-    line-height: 1.5;
-    color: #374151;
-}
+/* залиш тільки ОДИН варіант .back (кнопка) */
 .back {
     display: inline-block;
     margin-bottom: 12px;
@@ -48,8 +17,27 @@
     font-size: 14px;
     transition: background 0.2s ease;
 }
+.back:hover { background: #1e40af; }
 
-.back:hover {
-    background: #1e40af;
+.grid {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* ← постер впишеться завдяки width:100% */
+    gap: 16px;
 }
 
+.title { margin: 0 0 8px; font-size: 24px; }
+.block { margin-bottom: 12px; }
+.overview { line-height: 1.5; color: #374151; }
+
+/* мобільний */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* в одну колонку */
+    }
+    /* щоб постер не був надто вузьким */
+    .grid > div:first-child {
+        max-width: 320px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}

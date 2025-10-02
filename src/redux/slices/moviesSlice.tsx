@@ -1,5 +1,4 @@
-// src/redux/slices/moviesSlice.ts
-import { createAsyncThunk, createSlice,type PayloadAction } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { apiGet } from "../../services/api.service";
 import type { IMovieModel } from "../../models/IMovieModel";
 import type { Paginated } from "../../models/IPaginated";
@@ -40,11 +39,7 @@ export const loadMovies = createAsyncThunk(
 export const moviesSlice = createSlice({
     name: "moviesSlice",
     initialState: initState,
-    reducers: {
-        setPage(state, action: PayloadAction<number>) {
-            state.page = action.payload;
-        },
-    },
+    reducers: {},
     extraReducers: (builder) => {
         builder.addCase(
             loadMovies.fulfilled,
@@ -57,6 +52,5 @@ export const moviesSlice = createSlice({
     },
 });
 
-export const { setPage } = moviesSlice.actions;
 export const moviesActions = { ...moviesSlice.actions, loadMovies };
 export default moviesSlice;

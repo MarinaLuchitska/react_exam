@@ -7,8 +7,8 @@ export const routes = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout />, children: [
-            { path: "/", element: <MoviePage /> },       // = '/movie'
-            { path: "movie/:id", element: <MovieInfoPage /> }, // = '/movie/123'
+            { path: "/", element: <MoviePage /> },
+            { path: "movie/:id", element: <MovieInfoPage /> },
         ],
     },
 ]);

@@ -1,4 +1,3 @@
-// src/redux/slices/genresSlice.ts
 import { createAsyncThunk, createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { apiGet } from "../../services/api.service";
 import type { IGenreModel } from "../../models/IGenreModel";
@@ -13,7 +12,6 @@ const initState: GenresSliceState = {
     selectedGenreId: null,
 };
 
-// thunk для завантаження жанрів
 export const loadGenres = createAsyncThunk(
     "genres/loadGenres",
     async () => {
@@ -36,10 +34,7 @@ export const genresSlice = createSlice({
         });
     },
 });
-
-// дії
 export const genresActions = { ...genresSlice.actions, loadGenres };
 export const { setSelectedGenreId } = genresSlice.actions;
 
-// дефолт — slice (як у moviesSlice)
 export default genresSlice;

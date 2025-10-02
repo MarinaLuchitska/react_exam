@@ -39,7 +39,12 @@ export const MovieInfo = () => {
 
             <div className={css.grid}>
                 <div>
-                    <PosterPreview path={movie.poster_path} title={movie.title} size="w500" />
+                    <PosterPreview
+                        path={movie.poster_path}
+                        title={movie.title}
+                        size="w500"
+                        variant="details"
+                    />
                 </div>
 
                 <div>

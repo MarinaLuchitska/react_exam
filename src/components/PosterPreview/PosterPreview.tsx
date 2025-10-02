@@ -1,35 +1,25 @@
-import { useState, useMemo } from "react";
-import css from "./poster-preview.module.css";
+import { getPosterUrl} from "../../services/poster.service.ts";
+import "./poster-preview.css";
 
-type PosterSize = "w92" | "w154" | "w185" | "w342" | "w500" | "w780" | "original";
-
-type Props = {
+type PosterPreviewProps = {
     path?: string | null;
     title: string;
-    size?: PosterSize;
-    className?: string;
+    size?: string;
+    variant?: "card" | "details";
 };
 
-export default function PosterPreview({ path, title, size = "w342", className }: Props) {
-    const [failed, setFailed] = useState(false);
-
-
-    const base = (import.meta as any).env?.VITE_TMDB_IMG_BASE ?? "https://image.tmdb.org/t/p/";
-
-    const src = useMemo(() => {
-        if (!path || failed) return "/no-poster.jpg";
-        const clean = path.startsWith("/") ? path : `/${path}`;
-        return `${base}${size}${clean}`;
-    }, [path, failed, base, size]);
+const PosterPreview = ({ path, title, size = "w500", variant = "card" }: PosterPreviewProps) => {
+    const src = getPosterUrl(path, size);
 
     return (
         <img
+            className={variant === "details" ? "poster-details" : "poster-card"}
             src={src}
-            alt={title || "Poster"}
-            className={`${css.poster} ${className ?? ""}`}
-            onError={() => setFailed(true)}
+            alt={title}
             loading="lazy"
-            decoding="async"
+            onError={(e) => (e.currentTarget.src = "/assets/no-poster.png")}
         />
     );
-}
+};
+
+export default PosterPreview;

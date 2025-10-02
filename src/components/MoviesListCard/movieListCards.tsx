@@ -19,7 +19,12 @@ export const MovieListCard = ({ movie }: Props) => {
             onClick={() => navigate(`/movie/${movie.id}`)}
             title="Відкрити деталі"
         >
-            <PosterPreview path={movie.poster_path} title={movie.title} size="w342" />
+            <PosterPreview
+                path={movie.poster_path}
+                title={movie.title}
+                size="w342"        // оптимальний розмір для списку
+                variant="card"
+            />
             <div className={css.info}>
                 <h4 className={css.title}>{movie.title}</h4>
                 <p className={css.year}>{year}</p>
