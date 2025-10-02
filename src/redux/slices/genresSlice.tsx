@@ -4,7 +4,7 @@ import type { IGenreModel } from "../../models/IGenreModel";
 
 type GenresSliceState = {
     genres: IGenreModel[];
-    selectedGenreId: number | null; // null = All
+    selectedGenreId: number | null;
 };
 
 const initState: GenresSliceState = {

@@ -4,7 +4,6 @@
     margin: 0 auto;
 }
 
-/* залиш тільки ОДИН варіант .back (кнопка) */
 .back {
     display: inline-block;
     margin-bottom: 12px;
@@ -21,7 +20,7 @@
 
 .grid {
     display: grid;
-    grid-template-columns: 280px 1fr; /* ← постер впишеться завдяки width:100% */
+    grid-template-columns: 280px 1fr;
     gap: 16px;
 }
 
@@ -29,12 +28,11 @@
 .block { margin-bottom: 12px; }
 .overview { line-height: 1.5; color: #374151; }
 
-/* мобільний */
+
 @media (max-width: 768px) {
     .grid {
-        grid-template-columns: 1fr; /* в одну колонку */
+        grid-template-columns: 1fr;
     }
-    /* щоб постер не був надто вузьким */
     .grid > div:first-child {
         max-width: 320px;
         width: 100%;

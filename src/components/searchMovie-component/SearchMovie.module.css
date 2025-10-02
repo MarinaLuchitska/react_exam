@@ -1,9 +1,9 @@
 .shell {
     display: flex;
     align-items: center;
-    justify-content: center;   /* центруємо */
-    margin: 0 auto;            /* для вирівнювання по центру */
-    max-width: 400px;          /* компактніше */
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 400px;
     width: 100%;
     padding: 6px 12px;
     border-radius: 999px;
@@ -21,7 +21,7 @@
     color: #e6edf7;
     font-size: 14px;
     padding: 6px;
-    min-width: 140px;          /* щоб був маленький */
+    min-width: 140px;
 }
 
 .input::placeholder { color: rgba(230,237,247,.55); }
