@@ -1,5 +1,5 @@
 import { getPosterUrl} from "../../services/poster.service.ts";
-import "./poster-preview.css";
+import "./PosterPreview.css";
 
 type PosterPreviewProps = {
     path?: string | null;
@@ -16,7 +16,6 @@ const PosterPreview = ({ path, title, size = "w500", variant = "card" }: PosterP
             className={variant === "details" ? "poster-details" : "poster-card"}
             src={src}
             alt={title}
-            loading="lazy"
             onError={(e) => (e.currentTarget.src = "/assets/no-poster.png")}
         />
     );

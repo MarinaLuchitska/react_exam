@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
-import { loadMovies } from "../../redux/slices/moviesSlice";
-import css from "./pagination.module.css";
+import { loadMovies } from "../../redux/slices/MoviesSlice.tsx";
+import css from "./Pagination.module.css";
 
 type Props = { totalPages?: number };
 
@@ -26,7 +26,6 @@ export const PaginationComponent = ({ totalPages }: Props) => {
                     className={css.iconBtn}
                     onClick={() => go(page - 1)}
                     disabled={page <= 1}
-                    aria-label="Previous page"
                 >
                     ‹
                 </button>
@@ -39,7 +38,6 @@ export const PaginationComponent = ({ totalPages }: Props) => {
                     className={css.iconBtn}
                     onClick={() => go(page + 1)}
                     disabled={!!totalPages && page >= totalPages}
-                    aria-label="Next page"
                 >
                     ›
                 </button>

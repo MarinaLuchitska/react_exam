@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import { apiGet } from "../../services/api.service";
+import { apiGet } from "../../services/api.service.ts";
 import type { IGenreModel } from "../../models/IGenreModel";
 
 type GenresSliceState = {

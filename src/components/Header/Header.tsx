@@ -1,5 +1,5 @@
-import css from "./header.module.css";
-import {SearchForm} from "../searchMovie-component/searchMovie.tsx";
+import css from "./Header.module.css";
+import {SearchForm} from "../SearchMovie/SearchMovie.tsx";
 import {UserInfo} from "../UserInfo/UserInfo.tsx";
 
 export const Header = () => {

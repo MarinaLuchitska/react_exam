@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
-import { movieDetailsActions } from "../../redux/slices/movieDetailsSlice";
-import { RatingStars } from "../StarsRating/starsRating";
+import { movieDetailsActions } from "../../redux/slices/MovieDetailsSlice.tsx";
+import { RatingStars } from "../StarsRating/StarsRating.tsx";
 import PosterPreview from "../PosterPreview/PosterPreview";
-import css from "./movie-info.module.css";
+import css from "./MovieInfo.module.css";
 
 export const MovieInfo = () => {
     const { id } = useParams<{ id: string }>();
@@ -21,7 +21,7 @@ export const MovieInfo = () => {
         return (
             <div className={css.container}>
                 <button onClick={() => navigate(-1)} className={css.back}>
-                    Назад
+                    Back
                 </button>
 
                 <div className={css.loading}>Завантаження…</div>
@@ -34,7 +34,7 @@ export const MovieInfo = () => {
     return (
         <div className={css.container}>
             <button onClick={() => navigate(-1)} className={css.back}>
-                Назад
+                back
             </button>
 
             <div className={css.grid}>
@@ -53,11 +53,11 @@ export const MovieInfo = () => {
                     </h1>
 
                     <div className={css.block}>
-                        <b>Рейтинг:</b> <RatingStars rating={movie.vote_average} />
+                        <b>Rating:</b> <RatingStars rating={movie.vote_average} />
                     </div>
 
                     <div className={css.block}>
-                        <b>Жанри:</b> {movie.genres?.map((g) => g.name).join(", ") || "—"}
+                        <b>Genre:</b> {movie.genres?.map((g) => g.name).join(", ") || "—"}
                     </div>
 
                     <p className={css.overview}>{movie.overview || "Опис відсутній."}</p>

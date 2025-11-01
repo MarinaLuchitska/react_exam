@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import { apiGet } from "../../services/api.service";
+import { apiGet } from "../../services/api.service.ts";
 import type { IMovieModel } from "../../models/IMovieModel";
 import type { Paginated } from "../../models/IPaginated";
 

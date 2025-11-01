@@ -1,4 +1,4 @@
-import css from "./user-info.module.css";
+import css from "./UserInfo.module.css";
 
 export const UserInfo=()=> {
     return (

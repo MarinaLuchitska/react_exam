@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
-import { loadGenres, setSelectedGenreId } from "../../redux/slices/genresSlice";
-import { loadMovies } from "../../redux/slices/moviesSlice";
-import css from "./genres-filter.module.css";
+import { loadGenres, setSelectedGenreId } from "../../redux/slices/GenresSlice.tsx";
+import { loadMovies } from "../../redux/slices/MoviesSlice.tsx";
+import css from "./GenresFilter.module.css";
 
 const GenresFilter = () => {
     const dispatch = useAppDispatch();
@@ -12,11 +12,19 @@ const GenresFilter = () => {
     const genres = useAppSelector(s => s.genresStore.genres);
     const selected = useAppSelector(s => s.genresStore.selectedGenreId);
 
-    useEffect(() => { if (!genres.length) dispatch(loadGenres()); }, [dispatch, genres.length]);
+    useEffect(() => {
+        if (!genres?.length) {
+            dispatch(loadGenres());
+        }
+    }, [dispatch, genres?.length]);
 
     const handleClick = (id: number | null) => {
         dispatch(setSelectedGenreId(id));
-        setSearchParams(prev => { const q = new URLSearchParams(prev); q.set("page","1"); return q; });
+        setSearchParams(prev => {
+            const q = new URLSearchParams(prev);
+            q.set("page", "1");
+            return q;
+        });
         dispatch(loadMovies({ page: 1, genreId: id ?? undefined }));
     };
 
@@ -32,7 +40,7 @@ const GenresFilter = () => {
                     All
                 </button>
 
-                {genres.map(g => (
+                {genres?.map(g => (
                     <button
                         key={g.id}
                         type="button"

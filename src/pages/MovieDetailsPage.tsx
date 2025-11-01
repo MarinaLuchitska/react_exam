@@ -1,4 +1,4 @@
-import {MovieInfo} from "../components/MovieInfo/movieInfo.tsx";
+import {MovieInfo} from "../components/MovieInfo/MovieInfo.tsx";
 
 export const MovieInfoPage = ()=>{
     return(

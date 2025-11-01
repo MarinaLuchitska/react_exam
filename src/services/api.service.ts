@@ -3,7 +3,7 @@ import axios from "axios";
 export const api = axios.create({
     baseURL: import.meta.env.VITE_TMDB_API_BASE,
     headers: {
-        Authorization: `Bearer  ${import.meta.env.VITE_TMDB_API_KEY}`,
+        Authorization: `Bearer ${import.meta.env.VITE_TMDB_ACCESS_TOKEN}`,
     },
 });
 

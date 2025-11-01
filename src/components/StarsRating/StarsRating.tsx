@@ -1,4 +1,4 @@
-import css from "./rating-stars.module.css";
+import css from "./RatingStars.module.css";
 
 type Props = {
     rating: number;

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import type { IMovieModel } from "../../models/IMovieModel.ts";
-import { RatingStars } from "../StarsRating/starsRating.tsx";
-import css from "./movie-list-card.module.css";
+import { RatingStars } from "../StarsRating/StarsRating.tsx";
+import css from "./MovieListCards.module.css";
 import PosterPreview from "../PosterPreview/PosterPreview.tsx";
 
 type Props = {
@@ -22,7 +22,7 @@ export const MovieListCard = ({ movie }: Props) => {
             <PosterPreview
                 path={movie.poster_path}
                 title={movie.title}
-                size="w342"        // оптимальний розмір для списку
+                size="w342"
                 variant="card"
             />
             <div className={css.info}>

@@ -1,6 +1,6 @@
-import {PaginationComponent} from "../components/pagination-component/pagination-component.tsx";
-import {MoviesList} from "../components/MoviesList/movieList.tsx";
-import GenreFilter from "../components/GenreBadge/genreFilter.tsx";
+import {PaginationComponent} from "../components/Pagination/PaginationComponent.tsx";
+import {MoviesList} from "../components/MoviesList/MovieList.tsx";
+import GenreFilter from "../components/GenreBadge/GenreFilter.tsx";
 
 
 export const MoviePage =()=>{

@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import { apiGet} from "../../services/api.service.tsx";
+import { apiGet} from "../../services/api.service.ts";
 import type { IFullMovieModel} from "../../models/IFullMovieModel.ts";
 
 type DetailsSliceState = { movie: IFullMovieModel | null };

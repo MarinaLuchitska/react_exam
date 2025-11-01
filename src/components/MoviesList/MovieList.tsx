@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/store.tsx";
-import { moviesActions } from "../../redux/slices/moviesSlice.tsx";
-import { genresActions } from "../../redux/slices/genresSlice.tsx";
-import { MovieListCard } from "../MoviesListCard/movieListCards.tsx";
-import css from "./movies-list.module.css";
+import { moviesActions } from "../../redux/slices/MoviesSlice.tsx";
+import { genresActions } from "../../redux/slices/GenresSlice.tsx";
+import { MovieListCard } from "../MoviesListCard/MovieListCards.tsx";
+import css from "./MoviesList.module.css";
 
 export const MoviesList = () => {
     const [sp] = useSearchParams({ page: "1" });
