@@ -7,7 +7,7 @@ export const api = axios.create({
     },
 });
 
-export async function apiGet<T>(endpoint: string, params?: Record<string, any>): Promise<T> {
+export async function apiGet<T>(endpoint: string, params?: Record<string, string>): Promise<T> {
     const { data } = await api.get<T>(endpoint, { params });
     return data;
 }
