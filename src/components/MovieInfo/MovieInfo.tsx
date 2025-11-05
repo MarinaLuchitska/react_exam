@@ -5,6 +5,7 @@ import { movieDetailsActions } from "../../redux/slices/MovieDetailsSlice.tsx";
 import { RatingStars } from "../StarsRating/StarsRating.tsx";
 import PosterPreview from "../PosterPreview/PosterPreview";
 import css from "./MovieInfo.module.css";
+import type {IGenreModel} from "../../models/IGenreModel.ts";
 
 export const MovieInfo = () => {
     const { id } = useParams<{ id: string }>();
@@ -57,7 +58,7 @@ export const MovieInfo = () => {
                     </div>
 
                     <div className={css.block}>
-                        <b>Genre:</b> {movie.genres?.map((g) => g.name).join(", ") || "—"}
+                        <b>Genre:</b> {movie.genres?.map((g:IGenreModel) => g.name).join(", ") || "—"}
                     </div>
 
                     <p className={css.overview}>{movie.overview || "Опис відсутній."}</p>
